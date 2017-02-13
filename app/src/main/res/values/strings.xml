@@ -1,0 +1,5 @@
+<resources>
+   <string name="app_name">FilterDialogExample</string>
+   <string name="list_of_countries">List of Countries</string>
+   <string name="filter_dialog_example">Filter Dialog Example</string>
+</resources>
