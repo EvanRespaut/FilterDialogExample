@@ -20,7 +20,7 @@ import java.util.List;
 public class FilterAdapter extends BaseAdapter implements Filterable {
    List<String> arrayList; // current values post filtering
    private List<String> mOriginalValues; // values pre filtering
-   private LayoutInflater inflater; 
+   private LayoutInflater inflater;
 
    public FilterAdapter(Context context, List<String> arrayList) {
       this.arrayList = arrayList;
