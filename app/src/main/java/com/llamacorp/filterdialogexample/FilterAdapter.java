@@ -19,7 +19,7 @@ import java.util.List;
  * to filter items within it based on a filter string.
  */
 class FilterAdapter extends BaseAdapter implements Filterable {
-	List<String> arrayList; // current values post filtering
+	private List<String> arrayList; // current values post filtering
 	private List<String> mOriginalValues; // values pre filtering
 	private LayoutInflater inflater;
 
@@ -50,7 +50,7 @@ class FilterAdapter extends BaseAdapter implements Filterable {
 		if (convertView == null){
 
 			holder = new ViewHolder();
-			convertView = inflater.inflate(R.layout.dialog_list_row, parent, false);
+			convertView = inflater.inflate(R.layout.filter_dialog_list_row, parent, false);
 			holder.textView = (TextView) convertView.findViewById(R.id.country_name_textView);
 			convertView.setTag(holder);
 		} else {
@@ -58,6 +58,10 @@ class FilterAdapter extends BaseAdapter implements Filterable {
 		}
 		holder.textView.setText(arrayList.get(position));
 		return convertView;
+	}
+
+	List<String> getArrayList() {
+		return arrayList;
 	}
 
 	@Override
